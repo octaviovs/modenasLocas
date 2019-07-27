@@ -1,0 +1,9 @@
+<ul class="collection">
+    <li class="collection-item avatar" *ngFor="let moneda of dataArrayMondenaData">
+        <span class="title">Nombre: {{ moneda.name }}</span>
+        <p>Simbolo: {{moneda.symbol}}</p>
+        <p>Web: {{moneda.website_slug}}</p>
+        <p>numero par:: {{moneda.id}}</p>
+        <a [routerLink]="[ '/listar', moneda.id]" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+</ul>
