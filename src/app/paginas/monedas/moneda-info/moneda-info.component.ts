@@ -17,7 +17,9 @@ export class MonedaInfoComponent implements OnInit {
   mxn: number = 0;
   mxnNew: number = 0;
   constructor(public _mondeasService: MondeasService, public _activatedRoute:ActivatedRoute) {
+
     this.fecha = new Date();
+
     this._activatedRoute.params.subscribe((res)=>{
       this.getInitMoneda(res['id']);
     });
