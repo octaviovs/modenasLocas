@@ -29,13 +29,13 @@ export class MondeasService {
   }
   getMoneda(id: number) {
 
-    return this.http.get(`https://api.coinmarketcap.com/v2/ticker/3286/`).pipe(
+    return this.http.get(`${this.API_MONEDA}ticker/${id}/`).pipe(
       map(resp => resp['data'])
     );
   }
 
   getDollar() {
-
+    //constante del dolar respecto al peso
     //return new Promise((resolve, reject) => {});
     /* return this.http.get(`https://api.exchangeratesapi.io/latest`).pipe(
        map( resp  => resp['data'])

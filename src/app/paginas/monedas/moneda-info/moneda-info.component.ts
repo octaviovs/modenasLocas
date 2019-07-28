@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MondeasService } from '../../../core/services/modenas/mondea.service';
 import { MonedaData } from '../../../core/interfaces/monedas/interfaceMonedaData';
-import { calcBindingFlags } from '@angular/core/src/view/util';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-moneda-info',
@@ -16,10 +16,13 @@ export class MonedaInfoComponent implements OnInit {
   dollarValue: number = 0;
   mxn: number = 0;
   mxnNew: number = 0;
-  constructor(public _mondeasService: MondeasService) {
+  constructor(public _mondeasService: MondeasService, public _activatedRoute:ActivatedRoute) {
     this.fecha = new Date();
+    this._activatedRoute.params.subscribe((res)=>{
+      this.getInitMoneda(res['id']);
+    });
 
-    this.getInitMoneda(1);
+
     this.setDollarValue();
 
   }
