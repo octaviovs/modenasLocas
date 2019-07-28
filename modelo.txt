@@ -1,0 +1,49 @@
+{
+    "attention": "WARNING: This API is now deprecated and will be taken offline soon.  Please switch to the new CoinMarketCap API to avoid interruptions in service. (https://pro.coinmarketcap.com/migrate/)",
+    "data": {
+        "id": 3719,
+        "name": "StableUSD",
+        "symbol": "USDS",
+        "website_slug": "stableusd",
+        "rank": 499,
+        "circulating_supply": 4030149.0,
+        "total_supply": 4030149.0,
+        "max_supply": null,
+        "quotes": {
+            "USD": {
+                "price": 1.0028666746,
+                "volume_24h": 411960.40208288,
+                "market_cap": 4041702.0,
+                "percent_change_1h": 0.24,
+                "percent_change_24h": 0.1,
+                "percent_change_7d": 0.23
+            }
+        },
+        "last_updated": 1564276870
+    },
+    "metadata": {
+        "timestamp": 1564276626,
+        "warning": "WARNING: This API is now deprecated and will be taken offline soon.  Please switch to the new CoinMarketCap API to avoid interruptions in service. (https://pro.coinmarketcap.com/migrate/)",
+        "error": null
+    }
+}
+
+Operaciones
+
+ USD price:
+ USD tipo de cambio :
+ MXN   10
+Moneda a MXN
+
+
+
+USD price:   data.quotes.USD.price: 1.0028666746      -> precio del dolar respecto a la cripto-moneda
+USD tipo de cambio : cconstante del dolar
+MXN : es el valor que se ingresa
+Moneda a MXN es el valor que va tomar de la conversion respecto a la de la cripto moneda
+
+Operaciones
+
+19.9   ------> 1.0028666746
+
+cantidad (1)     ------>

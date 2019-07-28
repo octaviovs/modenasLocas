@@ -12,7 +12,7 @@ export class MonedaInfoComponent implements OnInit {
 
   moneda: MonedaData;
   fecha: Date;
-  monedaValue: number = 0;
+  monedaValue;
   dollarValue: number = 0;
   mxn: number = 0;
   mxnNew: number = 0;
@@ -28,7 +28,7 @@ export class MonedaInfoComponent implements OnInit {
     if (id > 0) {
       this._mondeasService.getMoneda(id).subscribe((data: MonedaData) => {
         this.moneda = data;
-        this.monedaValue = data.quotes.price;
+        this.monedaValue = data.quotes.USD.price;
       });
     }
   }
@@ -37,11 +37,8 @@ export class MonedaInfoComponent implements OnInit {
   }
 
   setMxn() {
-    let cantidad = this.mxn;
-
-    console.log("----------------");
-    if (cantidad != null && cantidad > 0) {
-      this.mxnNew = (2 * cantidad) / this.dollarValue;
+    if (this.mxn != null && this.mxn > 0) {
+      this.mxnNew = (this.monedaValue * this.mxn) / this.dollarValue;
     } else {
       this.mxnNew = 0;
     }
