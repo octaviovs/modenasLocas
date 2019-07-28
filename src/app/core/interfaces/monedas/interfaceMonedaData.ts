@@ -8,10 +8,12 @@ export interface MonedaData {
     circulating_supply: number;
     total_supply: number;
     max_supply: any;
-    quotes: Array<USD>;
-    last_updated:string;
+    quotes: USD;
+    last_updated: string;
 }
-interface USD {
+
+ interface USD {
+
     price: number;
     volume_24h: number;
     market_cap: number;

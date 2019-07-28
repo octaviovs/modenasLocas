@@ -19,8 +19,8 @@ export class MonedaListaComponent implements OnInit {
   }
 
   initMonedas() {
-    this._mondeasService.getListaMonenda().subscribe((res: Array<ArrayMondenaData>) => {
-      this.dataArrayMondenaData = res.sort(
+    this._mondeasService.getListaMonenda().subscribe((data: Array<ArrayMondenaData>) => {
+      this.dataArrayMondenaData = data.sort(
         (a, b) => {
           let x = a.name.toLowerCase();
           let y = b.name.toLowerCase();
